@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-sm-7">
+      <div class="video-container" *ngIf="currentChapter.type === 'video'">
+        <iframe
+          *ngIf="currentChapter.srcType === 'embed'"
+          width="600"
+          height="400"
+          [src]="getUrl(currentChapter.url)"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <video
+          *ngIf="currentChapter.srcType === 'local'"
+          width="600"
+          height="400"
+          controls
+        >
+          <source
+            [src]="'../../assets/' + currentChapter.url"
+            type="video/mp4"
+          />
+          Video not supported
+        </video>
+      </div>
+      <div class="pdf-container" *ngIf="currentChapter.type === 'pdf'">
+        <a
+          href="{{ currentChapter.url }}"
+          target="_blank"
+          class="btn btn-primary pdf-button"
+          >Click here to view the material</a
+        >
+      </div>
+    </div>
+    <div class="col col-sm-5">
+      <div class="chapter-name">
+        {{ currentChapter.name }}
+      </div>
+      <div class="chapter-description">
+        {{ currentChapter.description }}
+      </div>
+    </div>
+  </div>
+
+  <!--  All Chapters -->
+
+  <div class="row">
+    <div class="chapter-name all-chapters">All available tutorials</div>
+    <div class="chapters-container">
+      <div *ngFor="let i of [0, 1, 2, 3]" class="chapter">
+        <div *ngFor="let chapter of chapters; let i = index">
+          <div class="card chapter-card" [routerLink]="['/subjects', currentSubjectName, i]">
+            <div class="chapter-header">
+              <div class="text-muted">{{ chapter.type | titlecase }}</div>
+            </div>
+            <div class="card-body">
+              <img
+                class="chapter-image"
+                src="images/icon_1-e3e2422cb1e874706a4564d4662e215a.png"
+              />
+              <div>{{ chapter.name }}</div>
+              <div class="text-muted">{{ chapter.description }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

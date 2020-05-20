@@ -1,0 +1,25 @@
+.subject-header {
+  text-align: left;
+  font: Medium 18px/21px HelveticaNeue;
+  color: #5484ed;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.chapter-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.chapter {
+  &-card {
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: 20px;
+  }
+  &-header {
+    padding: 10px 0 0 20px;
+  }
+}

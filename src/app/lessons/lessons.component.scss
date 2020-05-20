@@ -1,0 +1,28 @@
+.content-count {
+  font: Regular 9px/13px Poppins;
+}
+
+.subject {
+  &-container {
+    margin: 0 80px;
+  }
+  &-title {
+    font-size: 20px;
+  }
+  &-card {
+    width: 300px;
+    background: transparent linear-gradient(125deg, #1D976C 0%, #9DD138 100%) 0% 0% no-repeat padding-box;
+
+    color: floralwhite;
+    border-radius: 12px;
+  }
+  &-progress {
+    align-items: center;
+    display: flex;
+  }
+  &-progress-bar {
+    width: calc(100% - 50px);
+    margin-right: 12px;
+  }
+}
+

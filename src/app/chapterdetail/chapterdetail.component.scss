@@ -1,0 +1,57 @@
+.container {
+  margin-top: 50px;
+
+  .chapter {
+    &-name {
+      font-size: 20px;
+      font-weight: 500;
+      color: #d70000;
+    }
+
+    &-description {
+      font-size: 40px;
+    }
+  }
+}
+
+.pdf-container {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  border: 1px solid #2680eb;
+  margin-bottom: 6px;
+  .pdf-button {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+  }
+}
+
+.chapter-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.chapter {
+  display: flex;
+  &-card {
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: 20px;
+  }
+  &-header {
+    padding: 10px 0 0 20px;
+  }
+}
+
+.chapters-container {
+  margin-top:30px;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}
+.all-chapters {
+  margin-top: 25px;
+}
